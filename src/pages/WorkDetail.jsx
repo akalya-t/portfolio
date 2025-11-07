@@ -1,8 +1,8 @@
 // src/pages/WorkDetail.jsx
 import { useParams, Link } from "react-router-dom";
-import { projectsData } from "../data/projectsData"; 
-import { motion } from "framer-motion"; 
-import { LazyLoadImage } from "react-lazy-load-image-component"; 
+import { projectsData } from "../data/projectsData";
+import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const WorkDetail = () => {
@@ -19,10 +19,23 @@ const WorkDetail = () => {
 
   return (
     <section className="min-h-screen bg-[#f9f6f1] text-[#3c2f2f] px-6 md:px-12 py-16">
-      {/* Hero */}
+      {/* Hero Section */}
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h1 className="text-4xl font-serif mb-2">{project.title}</h1>
         <p className="text-[#5b4b4b] mb-6">{project.subtitle}</p>
+
+        {project.liveLink && (
+          <motion.a
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mb-6 border border-[#3c2f2f] px-6 py-3 rounded-full hover:bg-[#3c2f2f] hover:text-[#f9f6f1] transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+          >
+            View Live Project ↗
+          </motion.a>
+        )}
+
         <img
           src={project.heroImage}
           alt={project.title}
@@ -30,7 +43,7 @@ const WorkDetail = () => {
         />
       </div>
 
-      {/* Content */}
+      {/* Content Section */}
       <div className="max-w-3xl mx-auto space-y-10 text-left leading-relaxed text-[#4b3e3e]">
         <div>
           <h3 className="text-xl font-semibold mb-2">Overview</h3>
@@ -72,10 +85,10 @@ const WorkDetail = () => {
 
         <div className="pt-10 text-center">
           <Link
-            to="/"
+            to="/work"
             className="inline-block border border-[#3c2f2f] px-6 py-3 rounded-full hover:bg-[#3c2f2f] hover:text-[#f9f6f1] transition-all"
           >
-            ← Back to Home
+            ← Back to Work
           </Link>
         </div>
       </div>
