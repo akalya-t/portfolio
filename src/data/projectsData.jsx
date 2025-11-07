@@ -40,6 +40,7 @@ export const projectsData = [
       where design meets functionality.
     `,
     images: [lg1, lg2, lg3,],
+    liveLink: "https://logo-gallery-two.vercel.app/",
   },
   {
     id: "portfolio",
@@ -58,7 +59,7 @@ export const projectsData = [
       A fast, minimal website that clearly represents who I am — and
       helps people connect with my work effortlessly.
     `,
-    images: [], 
+    images: [], livelink :"https://portfolio-seven-green-64.vercel.app/"
   },
   {
     id: "bearsite",
@@ -77,7 +78,8 @@ export const projectsData = [
       The result is a calm yet bold web presence that reflects how
       content and identity can coexist seamlessly.
     `,
-    images: [bear1, bear2, bear3,bear4],
+    images: [bear1, bear2, bear3,bear4], 
+    livelink:"https://bear-site-five.vercel.app/",
   },
   {
     id: "eunoia",
@@ -95,6 +97,6 @@ export const projectsData = [
       It’s a gentle reminder that tech can adapt to human emotion —
       bridging design, code, and psychology.
     `,
-    images: [mood1, mood2, mood3,mood4],
+    images: [mood1, mood2, mood3,mood4], livelink:"https://eunoia-gilt.vercel.app/"
   },
 ];
