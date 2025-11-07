@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === SWIPER STYLING === */
+
+/* Move dots further down */
+.swiper-pagination {
+  position: absolute;
+  bottom: -40px !important; /* ✅ moves dots below cards */
+}
+
+/* Pagination dots styling */
+.swiper-pagination-bullet {
+  background-color: #c7bdb2 !important;
+  opacity: 0.6;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #3c2f2f !important;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+}
+
+/* Navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3c2f2f !important;
+  background: rgba(249, 246, 241, 0.9);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 2px 6px rgba(60, 47, 47, 0.2);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #3c2f2f;
+  color: #f9f6f1 !important;
+  transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+    bottom: -30px !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 28px;
+    height: 28px;
+  }
+}
