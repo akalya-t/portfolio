@@ -1,9 +1,9 @@
 // src/pages/WorkDetail.jsx
 import { useParams, Link } from "react-router-dom";
-import { projectsData } from "../data/projectsData"; // <- make sure case matches the file name
-import { motion } from "framer-motion"; // ✅ you were using motion without importing
-import { LazyLoadImage } from "react-lazy-load-image-component"; // ✅ import lazy loader
-import "react-lazy-load-image-component/src/effects/blur.css"; // ✅ blur effect css
+import { projectsData } from "../data/projectsData"; 
+import { motion } from "framer-motion"; 
+import { LazyLoadImage } from "react-lazy-load-image-component"; 
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const WorkDetail = () => {
   const { id } = useParams();
