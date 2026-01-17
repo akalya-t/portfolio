@@ -17,7 +17,7 @@ const Navbar = () => {
         setTimeout(() => {
           section.scrollIntoView({ behavior: "smooth" });
           setScrollTarget(null);
-        }, 300); // slight delay for page render
+        }, 300); // delay for page render
       }
     }
   }, [location, scrollTarget]);
@@ -30,7 +30,7 @@ const Navbar = () => {
       if (section) section.scrollIntoView({ behavior: "smooth" });
     } else {
       setScrollTarget(sectionId);
-      navigate("/"); // go to home first
+      navigate("/"); //  home first
     }
   };
 
